@@ -1,0 +1,9 @@
+spring:
+  data:
+    mongodb:
+      database: graphqlpoc
+      host: localhost
+      port: 27017
+  graphql:
+    graphiql:
+      enabled: true

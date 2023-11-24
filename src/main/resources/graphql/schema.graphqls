@@ -1,0 +1,33 @@
+type Query {
+    getAllAccounts: [Account]
+    getAccountById(id: ID!): Account
+    getAllUsers: [User]
+    getUserById(id: ID!): User
+}
+
+type Mutation {
+    saveAccount(account: AccountInput): Account
+    saveUser(user: UserInput): User
+}
+
+input AccountInput {
+    owner: String!
+    usersId: [ID]
+}
+
+input UserInput {
+    username: String
+    password: String
+}
+
+type Account {
+    id: ID!
+    owner: String!
+    users: [User]
+}
+
+type User {
+    id: ID!
+    username: String!
+    password: String!
+}
